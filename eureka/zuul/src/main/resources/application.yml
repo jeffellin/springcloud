@@ -1,0 +1,12 @@
+server:
+  port: 9000
+zuul:
+  #Service will be mapped under the /api URI
+  prefix: /api
+  routes:
+    customer-by-service:
+      path: /customer-by-service/**
+      serviceId: EUREKA-SERVICE
+endpoints:
+  routes:
+    sensitive: false
